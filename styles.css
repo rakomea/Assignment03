@@ -1,0 +1,188 @@
+@import url('https://fonts.googleapis.com/css?family=Chilanka|Courgette|Crimson+Text|Indie+Flower|Ruge+Boogie&display=swap');
+/*	*************************************************
+	NAVIGATION
+	************************************************* */
+.main_nav ul{
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+	overflow: hidden;
+	font-family: 'Ruge Boogie', cursive;
+	font-size:30px;
+	display: flex;
+  	flex-direction: column;
+  	justify-content: flex-end;
+}
+
+.main_nav li{
+	float: left;
+}
+
+.main_nav li a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+.main_nav li a:hover {
+  background-color: #111;
+}
+
+.main_nav{
+	position: relative;
+	left:400px;
+
+	margin-top: 0;
+	grid-column: 4/5;
+  	grid-row: 1/5;
+	grid-area: header;
+}
+
+nav{
+	display:flex;
+	flex-direction: row;
+	font-family: 'Ruge Boogie', cursive;
+}
+
+nav ul {
+	text-indent: 0;
+	margin-left: 0;
+}
+nav ul { 
+	display: flex; 
+	flex-direction: row;
+	justify-content: flex-end;
+}
+nav li { 
+	margin-left: 20px;
+
+}
+@media ( max-width: 375px ) {
+	nav ul { 
+		display: block; 
+	}
+	nav li { margin-left: 0; }
+}
+
+/*	*************************************************
+	BASE
+	************************************************* */
+body {
+	font-family: 'Chilanka', serif;
+	font-size: x-large;
+	color: #333333;
+	line-height: 1.5em;
+	background-image: linear-gradient(to right, white, grey);
+}
+
+h1, h2, h3 {
+	font-family: 'Ruge Boogie', cursive;
+	letter-spacing: 0.15em;
+	color: black;
+	margin-bottom: 0;
+}
+h1 + p { margin-top: 0.5em; }
+
+a {
+	display: block;
+	padding: 0 10px; 
+	text-decoration: none;
+	color: white;
+}
+a:hover {
+	color: gray;
+}
+a:hover img {
+	opacity: 0.7;
+}
+
+ul {
+	list-style-type: none;
+}
+
+
+/*	*************************************************
+	HEADER
+	************************************************* */
+header h1 {
+    font-size: 1.50em;  
+}
+header img {
+   	position: relative;
+   	top: 5px;
+}
+
+/*	*************************************************
+	BASE - ASIDE
+	************************************************* */
+aside {
+	grid-column: 2 / 3; 
+	grid-row: 1 / 3;
+	align-self: end;
+	
+}
+aside ul {
+	margin-right: 20px; 
+	padding-left: 0;
+}
+
+/*	*************************************************
+	BASE - FOOTER
+	************************************************* */
+footer {
+	font-family: 'Chilanka', sans-serif;
+	font-size: large;
+	color: black;
+	line-height: 1.2em;
+}
+
+/*	*************************************************
+	BASE - NAV
+	************************************************* */
+
+
+
+
+/*	*************************************************
+	LAYOUT
+	************************************************* */
+.container {
+	margin: 15px auto;
+	width: 90%;
+	max-width: 960px;
+	display: grid;
+	
+}
+
+@media ( max-width: 375px ) {
+	.container { display: block; }
+}
+
+main { grid-column: 1 / 4; }
+
+header {
+	grid-column: 1 / 2; 
+	grid-row: 1 / 3;
+}
+
+nav { 
+	grid-column: 2 / 4; 
+	grid-row: 4 / 5;
+}
+
+footer { grid-column: 1 / 2; }
+
+@media ( max-width: 375px ) {
+	footer { margin-bottom: 15px; }
+}
+
+
+/*	*************************************************
+	STATE
+	************************************************* */
+.is-current {
+	background-color: black;
+	color: white;
+}
