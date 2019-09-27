@@ -1,16 +1,17 @@
-@import url('https://fonts.googleapis.com/css?family=Mansalva|Mukta|Oswald&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Poppins&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Lato|Poppins&display=swap');
 /*	*************************************************
 	BASE
 	************************************************* */
 body {
-	font-family: 'Mukta', sans-serif;
+	font-family: font-family: 'Lato', sans-serif;
 	font-size: x-large;
 	color: #333333;
 	line-height: 1.5em;
 }
 
 h1, h2, h3 {
-	font-family: 'Mansalva', cursive;
+	font-family: 'Poppins', sans-serif;
 	letter-spacing: 0.15em;
 	color:#663399;
 	margin-bottom: 0;
@@ -56,9 +57,6 @@ header h1 {
 header img {
     position: relative;
 	left: 40px;
-	box-shadow: 5px 5px #DDA0DD;
-	border-radius:80%;
-	padding-top: 50px;
 }
 
 /*	*************************************************
@@ -87,7 +85,7 @@ aside ul {
 	BASE - FOOTER
 	************************************************* */
 footer {
-	font-family: 'Oswald', sans-serif;
+	font-family: 'Poppins', sans-serif;
 	font-size: large;
 	color: black;
 	line-height: 1.2em;
