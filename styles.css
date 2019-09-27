@@ -1,86 +1,18 @@
-@import url('https://fonts.googleapis.com/css?family=Chilanka|Courgette|Crimson+Text|Indie+Flower|Ruge+Boogie&display=swap');
-/*	*************************************************
-	NAVIGATION
-	************************************************* */
-.main_nav ul{
-	list-style-type: none;
-	margin: 0;
-	padding: 0;
-	overflow: hidden;
-	font-family: 'Ruge Boogie', cursive;
-	font-size:30px;
-	display: flex;
-  	flex-direction: column;
-  	justify-content: flex-end;
-}
-
-.main_nav li{
-	float: left;
-}
-
-.main_nav li a {
-  display: block;
-  color: white;
-  text-align: center;
-  padding: 14px 16px;
-  text-decoration: none;
-}
-
-.main_nav li a:hover {
-  background-color: #111;
-}
-
-.main_nav{
-	position: relative;
-	left:400px;
-
-	margin-top: 0;
-	grid-column: 4/5;
-  	grid-row: 1/5;
-	grid-area: header;
-}
-
-nav{
-	display:flex;
-	flex-direction: row;
-	font-family: 'Ruge Boogie', cursive;
-}
-
-nav ul {
-	text-indent: 0;
-	margin-left: 0;
-}
-nav ul { 
-	display: flex; 
-	flex-direction: row;
-	justify-content: flex-end;
-}
-nav li { 
-	margin-left: 20px;
-
-}
-@media ( max-width: 375px ) {
-	nav ul { 
-		display: block; 
-	}
-	nav li { margin-left: 0; }
-}
-
+@import url('https://fonts.googleapis.com/css?family=Mansalva|Mukta|Oswald&display=swap');
 /*	*************************************************
 	BASE
 	************************************************* */
 body {
-	font-family: 'Chilanka', serif;
+	font-family: 'Mukta', sans-serif;
 	font-size: x-large;
 	color: #333333;
 	line-height: 1.5em;
-	background-image: linear-gradient(to right, white, grey);
 }
 
 h1, h2, h3 {
-	font-family: 'Ruge Boogie', cursive;
+	font-family: 'Mansalva', cursive;
 	letter-spacing: 0.15em;
-	color: black;
+	color:#663399;
 	margin-bottom: 0;
 }
 h1 + p { margin-top: 0.5em; }
@@ -89,7 +21,7 @@ a {
 	display: block;
 	padding: 0 10px; 
 	text-decoration: none;
-	color: white;
+	color: black;
 }
 a:hover {
 	color: gray;
@@ -100,18 +32,33 @@ a:hover img {
 
 ul {
 	list-style-type: none;
+	margin: 0;
+	padding-left: 0;
+	text-indent: -20px;
+	margin-left: 20px;
 }
 
 
 /*	*************************************************
-	HEADER
+	BASE - HEADER
 	************************************************* */
+header a { 
+	display: block;
+	position: relative; 
+}
 header h1 {
-    font-size: 1.50em;  
+    margin: 0;
+    font-size: 2em;
+    position: absolute;
+    top: 80px;
+    left: 380px;
 }
 header img {
-   	position: relative;
-   	top: 5px;
+    position: relative;
+	left: 40px;
+	box-shadow: 5px 5px #DDA0DD;
+	border-radius:80%;
+	padding-top: 50px;
 }
 
 /*	*************************************************
@@ -121,18 +68,26 @@ aside {
 	grid-column: 2 / 3; 
 	grid-row: 1 / 3;
 	align-self: end;
-	
+	font-style: italic;
+	font-size: 20px;
+	line-height: 30px;
+	border: 3px solid grey;
+	padding: 15px;
+	border-radius: 15px;
+	box-shadow: 4px 5px 5px 0px #7D3C98;
+	width: 50%;
+	margin-left: 60px;
+	color:black;
 }
 aside ul {
-	margin-right: 20px; 
-	padding-left: 0;
+	padding-left: 55px;
 }
 
 /*	*************************************************
 	BASE - FOOTER
 	************************************************* */
 footer {
-	font-family: 'Chilanka', sans-serif;
+	font-family: 'Oswald', sans-serif;
 	font-size: large;
 	color: black;
 	line-height: 1.2em;
@@ -141,39 +96,58 @@ footer {
 /*	*************************************************
 	BASE - NAV
 	************************************************* */
-
-
+nav ul {
+	text-indent: 0;
+	margin-left: 0;
+}
+nav ul { 
+	display: flex; 
+	justify-content: flex-end;
+}
+nav li { 
+	margin-left: 20px;
+}
+@media ( max-width: 375px ) {
+	nav ul { 
+		display: block; 
+	}
+	nav li { margin-left: 0; }
+}
 
 
 /*	*************************************************
 	LAYOUT
 	************************************************* */
-.container {
-	margin: 15px auto;
-	width: 90%;
-	max-width: 960px;
-	display: grid;
-	
+
+/* THIS IS NEW */
+.home_nav{
+	grid-column: 1/4;
+	grid-row: 1/3;
 }
 
+.container {
+	margin: 25px auto;
+	width: 90%;
+	max-width: 960px;
+
+	display: grid;
+	grid-template-columns: 260px 1fr 200px;
+	/* grid-template-rows: 260px 260px 260px 260px; /* @Prof.Kostin: trying to restructure row layout. Why isn't this changing anything?*/ 
+}
 @media ( max-width: 375px ) {
 	.container { display: block; }
 }
 
 main { grid-column: 1 / 4; }
-
 header {
 	grid-column: 1 / 2; 
 	grid-row: 1 / 3;
 }
-
 nav { 
 	grid-column: 2 / 4; 
 	grid-row: 4 / 5;
 }
-
-footer { grid-column: 1 / 2; }
-
+footer { grid-column: 2/ 2; }
 @media ( max-width: 375px ) {
 	footer { margin-bottom: 15px; }
 }
@@ -182,7 +156,60 @@ footer { grid-column: 1 / 2; }
 /*	*************************************************
 	STATE
 	************************************************* */
-.is-current {
-	background-color: black;
-	color: white;
+.menu a.is-current {
+		background-color: #BA55D3;
+		color: white;
+	}
+.is-current{
+		background-color:#E6E6FA ;
+		color: white;
+	}
+.container{
+	display:grid;
+	grid-template-columns: 260px 2fr 200px;
+	grid-template-rows: 260px 260px 260px 260px; /*@Prof.Kostin: trying to restructure row layout. Why isn't this changing anything?*/
 }
+nav.sub-menus{
+	color:#663399;
+	grid-column: 2/4;
+	grid-row: 2/5;
+	margin-right:180px;
+}
+
+nav.sub-menus a{
+	color:#663399;
+}
+
+nav.main-menu{
+	grid-column: 3/4;
+	grid-row: 1/5;
+	position: fixed;
+	top: 0;
+  left: 0;
+  z-index: 9999;
+  width: 100%;
+	background-color: #663399;
+	text-align: center;
+ 	 height: 35px;
+
+}
+nav.main-menu a{
+   color: #EE82EE;
+   font-weight: bold;
+}
+
+.column {
+	float: left;
+	width: 450px;
+	padding: 10px;
+	
+	
+  }
+  
+  /* Clear floats after the columns */
+  .row:after {
+	content: "";
+	display: table;
+	clear: both;
+	
+  }
