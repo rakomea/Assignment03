@@ -1,3 +1,4 @@
+
 # Chattanooga
 
 ## Entrepreneurs
@@ -17,3 +18,4 @@
 
 ### Choreography
 The order follows a natural story: an overview of the person, then diving deeper to learn about what they have built. It then dives into how they were able to build those things given their background, and finally discusses other interests of the person. 
+
